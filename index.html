@@ -1,0 +1,584 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chez Valenti - Professional Hypnotherapy & Regression Therapy</title>
+    <meta name="description" content="Professional hypnotherapy services with 20 years of experience. Specialized in regression therapy, trauma healing, and life transformation. Located in Knysna, South Africa.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar glass-effect">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Chez Valenti</h2>
+                <span class="nav-subtitle">Master Hypnotherapist</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="hypno-oncology.html" class="nav-link">Hypno-Oncology</a>
+                <a href="#book" class="nav-link">Book</a>
+                <a href="#testimonials" class="nav-link">Testimonials</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <video autoplay muted loop class="hero-video">
+                <source src="assets/Il-mio-filmato-2.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-questions">
+                <h1 class="question-text active" data-question="1">Are you serious about bringing lasting change into your life?</h1>
+                <h1 class="question-text" data-question="2">Are you ready to start a journey to discover your core?</h1>
+                <h1 class="question-text" data-question="3">Have you tried other therapies without lasting results?</h1>
+                <h1 class="question-text" data-question="4">Do you want to discover your true potential?</h1>
+                <h1 class="question-text" data-question="5">Are you ready for positive change?</h1>
+            </div>
+            <div class="hero-buttons">
+                <button class="btn-primary" onclick="scrollToSection('contact')">Book Your Consultation</button>
+                <button class="btn-secondary" onclick="scrollToSection('about')">Discover More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section id="stats" class="stats-section">
+        <div class="container">
+            <div class="stats-content">
+                <p class="stats-intro">20 Years of Experience in Healing Trauma and Unlocking Human Potential</p>
+                <div class="stats-grid">
+                    <div class="stat-item glass-effect">
+                        <span class="stat-number">20+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat-item glass-effect">
+                        <span class="stat-number">1000+</span>
+                        <span class="stat-label">Lives Transformed</span>
+                    </div>
+                    <div class="stat-item glass-effect">
+                        <span class="stat-number">3</span>
+                        <span class="stat-label">Professional Certifications</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About Chez Valenti</h2>
+                <p>Master Hypnotherapist and Regression Specialist</p>
+            </div>
+            <!-- Photo Gallery Section -->
+            <div class="about-gallery-section">
+                <div class="photo-gallery-centered">
+                    <div class="photo-carousel">
+                        <!-- Main Display -->
+                        <div class="carousel-main">
+                            <div class="main-photo-container glass-effect">
+                                <img id="mainPhoto" src="assets/Chez-valenti-1Up.png" alt="Chez Valenti - Master Hypnotherapist" class="main-carousel-photo">
+                                
+                                <!-- Navigation Arrows -->
+                                <button class="carousel-btn carousel-prev" id="prevBtn">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="15 18 9 12 15 6"></polyline>
+                                    </svg>
+                                </button>
+                                <button class="carousel-btn carousel-next" id="nextBtn">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="9 18 15 12 9 6"></polyline>
+                                    </svg>
+                                </button>
+                                
+                                <!-- Photo Counter -->
+                                <div class="photo-counter">
+                                    <span id="currentPhoto">1</span> / <span id="totalPhotos">4</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Thumbnail Navigation -->
+                        <div class="carousel-thumbnails">
+                            <div class="thumbnail-item active glass-effect" data-index="0">
+                                <img src="assets/Chez-valenti-1Up.png" alt="Photo 1" class="thumbnail-photo">
+                            </div>
+                            <div class="thumbnail-item glass-effect" data-index="1">
+                                <img src="assets/Chez-valenti-2Up.png" alt="Photo 2" class="thumbnail-photo">
+                            </div>
+                            <div class="thumbnail-item glass-effect" data-index="2">
+                                <img src="assets/Chez-valenti-4Up.png" alt="Photo 3" class="thumbnail-photo">
+                            </div>
+                            <div class="thumbnail-item glass-effect" data-index="3">
+                                <img src="assets/Chez-valenti-5Up.png" alt="Photo 4" class="thumbnail-photo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content Section -->
+            <div class="about-content-full">
+                <div class="about-text-full glass-effect">
+                    <h3>Healing the Past, Freeing the Future</h3>
+                    <p>With 20 years of dedicated practice in hypnotherapy and regression therapy, I specialize in helping individuals overcome trauma, break limiting habits, and unlock their full potential. My client-centered approach integrates modern hypnosis techniques with a self-developed modality tailored to support each client's unique needs.</p>
+                    
+                    <div class="experience-highlights">
+                        <div class="highlight-item">
+                            <h4>Regression Therapy Specialist</h4>
+                            <p>Expert in accessing and healing past experiences that impact present life. Through guided regression techniques, I help clients uncover and resolve deep-rooted traumas, limiting beliefs, and emotional blocks. This powerful approach allows for profound healing and transformation by addressing the root causes of current challenges.</p>
+                        </div>
+                        <div class="highlight-item">
+                            <h4>Medical Collaboration</h4>
+                            <p>Working closely with GPs, Neurologists, and Surgeons for comprehensive care. I provide therapeutic support for pre and post-surgical anxiety, pain management, and recovery enhancement. My collaborative approach ensures patients receive holistic care that addresses both physical and mental aspects of healing.</p>
+                        </div>
+                        <div class="highlight-item">
+                            <h4>Student Support</h4>
+                            <p>Specialized programs for high school and university students facing academic challenges. I help students overcome exam anxiety, improve concentration and memory, enhance study skills, and build confidence. My techniques have helped countless students achieve their academic potential and manage stress effectively.</p>
+                        </div>
+                    </div>
+
+                    <div class="credentials">
+                        <h4>Professional Credentials</h4>
+                        <div class="credential-list">
+                            <div class="credential-item">
+                                <span class="credential-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                                        <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                                    </svg>
+                                </span>
+                                <span>Bachelor of Arts (Psych) University of South Africa</span>
+                            </div>
+                            <div class="credential-item">
+                                <span class="credential-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                                    </svg>
+                                </span>
+                                <span>South African Institute of Hypnosis - Certified Hypnotherapist (C.Ht)</span>
+                            </div>
+                            <div class="credential-item">
+                                <span class="credential-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <line x1="2" y1="12" x2="22" y2="12"/>
+                                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                                    </svg>
+                                </span>
+                                <span>International Medical and Dental Association (USA) - Member</span>
+                            </div>
+                            <div class="credential-item">
+                                <span class="credential-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                                        <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                                    </svg>
+                                </span>
+                                <span>Professional Hypnotherapy Practitioner</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Professional Services</h2>
+                <p>Comprehensive Hypnotherapy solutions for lasting transformation</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card glass-effect">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 6v6l4 2"/>
+                        </svg>
+                    </div>
+                    <h3>Regression Therapy</h3>
+                    <p>Accessing and healing past experiences that influence current behavior patterns and emotional responses.</p>
+                    <ul>
+                        <li>Regression back to Root Core</li>
+                        <li>Childhood Trauma Healing</li>
+                        <li>Memory Processing</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card glass-effect">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                        </svg>
+                    </div>
+                    <h3>Trauma Support</h3>
+                    <p>Specialized support for PTSD, anxiety, phobias, and emotional trauma using gentle hypnotic techniques.</p>
+                    <ul>
+                        <li>PTSD Support</li>
+                        <li>Anxiety & Phobia Relief</li>
+                        <li>Emotional Healing</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card glass-effect">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                        </svg>
+                    </div>
+                    <h3>Habit Breaking</h3>
+                    <p>Effective programs to overcome self-sabotage, addictive behaviors, and unwanted habits.</p>
+                    <ul>
+                        <li>Self-Sabotage Patterns</li>
+                        <li>Weight Management</li>
+                        <li>Behavioral Modification</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card glass-effect">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                        </svg>
+                    </div>
+                    <h3>Student Support</h3>
+                    <p>Specialized hypnotherapy programs for academic performance, exam anxiety, and study habits.</p>
+                    <ul>
+                        <li>Exam Anxiety Relief</li>
+                        <li>Study Enhancement</li>
+                        <li>Confidence Building</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card glass-effect">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                        </svg>
+                    </div>
+                    <h3>Medical Collaboration</h3>
+                    <p>Working alongside medical professionals to provide comprehensive care for patients.</p>
+                    <ul>
+                        <li>Pre/Post Surgery Support</li>
+                        <li>Pain Management</li>
+                        <li>Medical Procedure Anxiety</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card glass-effect">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"/>
+                            <line x1="12" y1="1" x2="12" y2="3"/>
+                            <line x1="12" y1="21" x2="12" y2="23"/>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                            <line x1="1" y1="12" x2="3" y2="12"/>
+                            <line x1="21" y1="12" x2="23" y2="12"/>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                        </svg>
+                    </div>
+                    <h3>Life Transformation</h3>
+                    <p>Comprehensive programs for personal development, confidence building, and life enhancement.</p>
+                    <ul>
+                        <li>Self-Confidence Building</li>
+                        <li>Life Purpose Discovery</li>
+                        <li>Personal Empowerment</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card glass-effect">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
+                            <path d="M12 6v6l4 2"/>
+                            <circle cx="12" cy="12" r="3" fill="currentColor" opacity="0.3"/>
+                            <path d="M8 16.5c1.5-1.5 3-2 4-2s2.5.5 4 2"/>
+                        </svg>
+                    </div>
+                    <h3>Hypno-Oncology</h3>
+                    <p>Complementary support for cancer patients throughout their healing journey, working alongside medical treatment.</p>
+                    <ul>
+                        <li>Pain & Stress Management</li>
+                        <li>Treatment Side Effect Support</li>
+                        <li>Immune System Activation</li>
+                    </ul>
+                    <a href="hypno-oncology.html" class="service-learn-more">Learn More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Book Section -->
+    <section id="book" class="book-section">
+        <div class="container">
+            <div class="book-content">
+                <div class="book-text glass-effect">
+                    <h2>Getting to the Core</h2>
+                    <h3>Healing the Past, Freeing the Future</h3>
+                    <p>Discover the transformative power of regression therapy through this comprehensive guide. Based on 20 years of professional practice, this book reveals the techniques and insights that have helped thousands break free from limiting patterns.</p>
+                    
+                    <div class="book-features">
+                        <div class="feature">
+                            <span class="feature-icon"></span>
+                            <span>Practical Techniques</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon"></span>
+                            <span>Scientific Approach</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon"></span>
+                            <span>Real Case Studies</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon"></span>
+                            <span>Step-by-Step Guide</span>
+                        </div>
+                    </div>
+
+                    <div class="book-purchase">
+                        <h4>Get Your Copy Today:</h4>
+                        <div class="purchase-buttons">
+                            <a href="https://www.amazon.com/Getting-Core-Chez-Valenti-ebook/dp/B06XJ4K3QV/ref=sr_1_1?sr=8-1" class="purchase-btn" target="_blank">
+                                Buy on <span class="brand-amazon">Amazon</span> or <span class="brand-kindle">Kindle</span>
+                            </a>
+                            <a href="https://www.takealot.com/getting-to-the-core-s-c-self-analysis/PLID47126766" class="purchase-btn" target="_blank">
+                                Buy on <span class="brand-takealot">Takealot</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="book-images">
+                    <div class="book-cover-main glass-effect">
+                        <img src="assets/The_Core-2.jpg" alt="Getting to the Core - Book Cover" class="book-cover">
+                    </div>
+                    <div class="book-cover-promo glass-effect">
+                        <img src="assets/Getting-to-the-Core.jpg" alt="Getting to the Core - Promotional Image" class="book-promo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>Client Testimonials</h2>
+                <p>Real stories of transformation and healing</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card glass-effect">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">"</div>
+                        <p>Chez Valenti completely transformed my life. Through his expert regression therapy techniques, I was able to heal from decades of trauma and finally find peace. His compassionate approach and deep understanding made all the difference. I cannot recommend him highly enough to anyone seeking genuine healing and life transformation.</p>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4>Wian Koch</h4>
+                                <span>Garden Route, South Africa</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card glass-effect">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">"</div>
+                        <p>For years, I was my own worst enemy - constantly sabotaging my relationships, career opportunities, and personal goals just when things started going well. I couldn't understand why I kept destroying the good things in my life. Chez helped me uncover the deep-rooted patterns that were driving these behaviors and gave me the tools to break free from them. I finally feel in control of my life and am achieving goals I never thought possible.</p>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4>Linda Robertson</h4>
+                                <span>Sandton, Johannesburg, South Africa</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card glass-effect">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">"</div>
+                        <p>The trauma I experienced as a child had haunted me for over 40 years - affecting my relationships, my ability to trust, and my sense of self-worth. I had tried traditional therapy but could never get to the core of the pain. Through Chez's regression therapy, I was finally able to go back, heal those wounded parts of myself, and release the grip that childhood trauma had on my adult life. I feel like I'm living freely for the first time.</p>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4>Janet Van Der Merwe</h4>
+                                <span>Roodepoort, Johannesburg, South Africa</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Book Your Consultation</h2>
+                <p>Take the first step toward transformation</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-form-container glass-effect">
+                    <h3>Consultation Booking Form</h3>
+                    <form class="contact-form" id="consultationForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder=" " required>
+                            <label for="name">Full Name *</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder=" " required>
+                            <label for="email">Email Address *</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" placeholder=" ">
+                            <label for="phone">Phone Number (Optional)</label>
+                        </div>
+                        <div class="form-group">
+                            <select id="service" name="service" required>
+                                <option value="">Select a Service</option>
+                                <option value="regression-therapy">Regression Therapy</option>
+                                <option value="trauma-support">Trauma Support</option>
+                                <option value="habit-breaking">Habit Breaking</option>
+                                <option value="student-support">Student Support</option>
+                                <option value="medical-collaboration">Medical Collaboration</option>
+                                <option value="life-transformation">Life Transformation</option>
+                                <option value="hypno-oncology">Hypno-Oncology</option>
+                            </select>
+                            <label for="service">Service Interest</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" placeholder="Please describe your situation and what you hope to achieve..." required></textarea>
+                            <label for="message" class="textarea-label">Message *</label>
+                        </div>
+                        <button type="submit" class="btn-primary">Send Consultation Request</button>
+                    </form>
+                </div>
+                
+                <div class="contact-info">
+                    <div class="info-card glass-effect">
+                        <h3>Practice Location</h3>
+                        <div class="info-item">
+                            <span class="info-icon">📍</span>
+                            <div>
+                                <strong>Advanced Knysna Surgical Centre</strong><br>
+                                4 Barracuda Street, Fisher Haven<br>
+                                Knysna, 6571<br>
+                                South Africa
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">✉️</span>
+                            <div>
+                                <strong>Email:</strong><br>
+                                <a href="mailto:chez@ultimatemindpower.co.za">chez@ultimatemindpower.co.za</a>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">🌐</span>
+                            <div>
+                                <strong>Website:</strong><br>
+                                <a href="https://chezvalenti.com">chezvalenti.com</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="map-container glass-effect">
+                        <div id="map"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section id="newsletter" class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content glass-effect">
+                <div class="newsletter-text">
+                    <h2>Join Our Newsletter</h2>
+                    <p>Receive insights on transformation, healing techniques, and exclusive content directly to your inbox</p>
+                </div>
+                <form class="newsletter-form" id="newsletterForm">
+                    <div class="newsletter-input-group">
+                        <input type="email" 
+                               id="newsletter-email" 
+                               name="email" 
+                               placeholder="Enter your email address" 
+                               required>
+                        <button type="submit" class="btn-newsletter">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer glass-effect">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Chez Valenti</h3>
+                    <p>Professional Hypnotherapy & Regression Therapy</p>
+                    <p>20 Years of Experience • Licensed & Certified</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li>Regression Therapy</li>
+                        <li>Trauma Therapy</li>
+                        <li>Habit Breaking</li>
+                        <li>Student Support</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>chez@ultimatemindpower.co.za</p>
+                    <p>Knysna, South Africa</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Chez Valenti. All rights reserved. | Professional Hypnotherapy Services</p>
+                <div class="footer-credits">
+                    <p>Powered by <a href="https://antikythera.co.za/" target="_blank" rel="noopener noreferrer" class="antikythera-link">Antikythera Technologies PTY LTD</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("o8zn-rPZHeb0Ef_OF");
+        })();
+    </script>
+    
+    <script src="script.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+</body>
+</html>
