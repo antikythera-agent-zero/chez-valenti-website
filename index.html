@@ -22,6 +22,7 @@
             <div class="nav-menu" id="nav-menu">
                 <a href="#home" class="nav-link">Home</a>
                 <a href="#about" class="nav-link">About</a>
+                <a href="#podcast" class="nav-link">Podcast</a>
                 <a href="#services" class="nav-link">Services</a>
                 <a href="hypno-oncology.html" class="nav-link">Hypno-Oncology</a>
                 <a href="#book" class="nav-link">Book</a>
@@ -190,6 +191,17 @@
                             <div class="credential-item">
                                 <span class="credential-icon">
                                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
+                                        <path d="M12 6v6l4 2"/>
+                                        <circle cx="12" cy="12" r="3" fill="currentColor" opacity="0.3"/>
+                                        <path d="M8 16.5c1.5-1.5 3-2 4-2s2.5.5 4 2"/>
+                                    </svg>
+                                </span>
+                                <span>International Academy of Hypnosis and Healing Arts – Hypno-Oncology</span>
+                            </div>
+                            <div class="credential-item">
+                                <span class="credential-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                         <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
                                         <path d="M6 12v5c3 3 9 3 12 0v-5"/>
                                     </svg>
@@ -328,6 +340,92 @@
                         <li>Immune System Activation</li>
                     </ul>
                     <a href="hypno-oncology.html" class="service-learn-more">Learn More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Podcast Section -->
+    <section id="podcast" class="podcast-section">
+        <div class="container">
+            <div class="podcast-content">
+                <div class="podcast-card glass-effect">
+                    <div class="podcast-header">
+                        <div class="podcast-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="1"/>
+                                <circle cx="12" cy="12" r="6"/>
+                                <circle cx="12" cy="12" r="11"/>
+                                <path d="M8.56 3.69a9 9 0 0 1 6.88 0"/>
+                                <path d="M8.56 20.31a9 9 0 0 0 6.88 0"/>
+                                <path d="M3.69 8.56a9 9 0 0 1 0 6.88"/>
+                                <path d="M20.31 8.56a9 9 0 0 0 0 6.88"/>
+                            </svg>
+                        </div>
+                        <div class="podcast-title">
+                            <h3>Featured Podcast</h3>
+                            <p>Listen to Chez Valenti on the Gareth Cliff Podcast</p>
+                        </div>
+                    </div>
+                    
+                    <div class="custom-audio-player" id="customAudioPlayer">
+                        <audio id="podcastAudio" preload="metadata">
+                            <source src="assets/gareths_guests_1_mar_chez_valenti_rabbi_zeev_kraines_medium.m4a" type="audio/mp4">
+                            Your browser does not support the audio element.
+                        </audio>
+                        
+                        <div class="audio-controls">
+                            <button class="audio-btn play-pause-btn" id="playPauseBtn">
+                                <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="5 3 19 12 5 21 5 3"/>
+                                </svg>
+                                <svg class="pause-icon" viewBox="0 0 24 24" fill="currentColor" style="display: none;">
+                                    <rect x="6" y="4" width="4" height="16"/>
+                                    <rect x="14" y="4" width="4" height="16"/>
+                                </svg>
+                            </button>
+                            
+                            <button class="audio-btn stop-btn" id="stopBtn">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <rect x="6" y="6" width="12" height="12"/>
+                                </svg>
+                            </button>
+                            
+                            <div class="progress-container">
+                                <div class="progress-bar" id="progressBar">
+                                    <div class="progress-fill" id="progressFill"></div>
+                                    <div class="progress-handle" id="progressHandle"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="time-display">
+                                <span id="currentTime">0:00</span>
+                                <span class="time-separator">/</span>
+                                <span id="totalTime">0:00</span>
+                            </div>
+                            
+                            <div class="volume-container">
+                                <button class="audio-btn volume-btn" id="volumeBtn">
+                                    <svg class="volume-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+                                        <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/>
+                                    </svg>
+                                </button>
+                                <div class="volume-slider">
+                                    <input type="range" id="volumeRange" min="0" max="100" value="70">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="audio-info">
+                            <div class="podcast-photo-container">
+                                <img src="assets/gareth-cliff-central.jpg" alt="Chez Valenti with Gareth Cliff and Rabbi Zeev Kraines" class="podcast-photo">
+                            </div>
+                            <p class="podcast-description">
+                                An insightful conversation about hypnotherapy, healing, and personal transformation featuring Chez Valenti alongside Rabbi Zeev Kraines on Gareth Cliff's popular podcast.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
