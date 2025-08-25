@@ -1627,6 +1627,147 @@ body::after {
     display: block;
 }
 
+/* Online Consultation Section */
+.online-consultation-info {
+    max-width: 1200px;
+    margin: var(--space-3xl) auto 0;
+    padding: var(--space-2xl);
+    background: var(--glass-bg-light);
+    backdrop-filter: blur(var(--glass-blur));
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    box-shadow: 
+        0 20px 40px var(--glass-shadow),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.online-consultation-info h3 {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--space-xl);
+    text-align: center;
+}
+
+.online-content {
+    display: flex;
+    gap: var(--space-xl);
+    align-items: flex-start;
+}
+
+.online-icon {
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--gunmetal), var(--denim));
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.online-icon svg {
+    width: 40px;
+    height: 40px;
+    color: var(--mint-cream);
+}
+
+.online-text {
+    flex: 1;
+}
+
+.online-text p {
+    color: var(--text-primary);
+    line-height: 1.7;
+    margin-bottom: var(--space-lg);
+}
+
+.online-benefits {
+    background: rgba(139, 170, 173, 0.08);
+    padding: var(--space-lg);
+    border-radius: var(--radius-md);
+    margin: var(--space-xl) 0;
+    border-left: 3px solid var(--denim);
+}
+
+.online-benefits h4 {
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    margin-bottom: var(--space-md);
+    font-weight: 600;
+}
+
+.online-benefits ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.online-benefits li {
+    position: relative;
+    padding-left: var(--space-lg);
+    margin-bottom: var(--space-sm);
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.online-benefits li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--denim);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.online-benefits li strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.online-note {
+    background: rgba(39, 93, 173, 0.05);
+    padding: var(--space-lg);
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(39, 93, 173, 0.15);
+    font-style: italic;
+}
+
+.online-cta {
+    margin-top: var(--space-xl);
+    padding: var(--space-lg);
+    background: linear-gradient(135deg, rgba(39, 93, 173, 0.1), rgba(171, 169, 195, 0.05));
+    border-radius: var(--radius-md);
+    text-align: center;
+}
+
+.online-cta p {
+    margin: 0;
+    font-size: 1.05rem;
+}
+
+@media (max-width: 768px) {
+    .online-content {
+        flex-direction: column;
+    }
+    
+    .online-icon {
+        width: 60px;
+        height: 60px;
+        margin: 0 auto;
+    }
+    
+    .online-icon svg {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .online-consultation-info h3 {
+        font-size: 1.5rem;
+    }
+}
+
 /* Footer - Minimalist Elegance */
 .footer {
     background: var(--gradient-primary);

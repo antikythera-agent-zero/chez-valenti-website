@@ -564,6 +564,209 @@
     }
 }
 
+/* Download Resources Section */
+.download-section {
+    padding: var(--space-3xl) 0;
+    background: linear-gradient(180deg, 
+        rgba(244, 255, 248, 0.02) 0%, 
+        rgba(252, 247, 248, 0.04) 100%);
+}
+
+.download-card {
+    display: flex;
+    gap: var(--space-2xl);
+    padding: var(--space-2xl);
+    background: var(--glass-bg-light);
+    backdrop-filter: blur(var(--glass-blur));
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    box-shadow: 
+        0 20px 40px var(--glass-shadow),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    transition: var(--transition-smooth);
+}
+
+.download-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 
+        0 30px 60px rgba(0, 15, 8, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.download-icon {
+    flex-shrink: 0;
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, var(--gunmetal), var(--denim));
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.download-icon::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transform: rotate(45deg);
+    transition: var(--transition-smooth);
+}
+
+.download-card:hover .download-icon::before {
+    animation: shimmer 2s ease-in-out infinite;
+}
+
+.download-icon svg {
+    width: 50px;
+    height: 50px;
+    color: var(--mint-cream);
+    z-index: 1;
+}
+
+.download-content {
+    flex: 1;
+}
+
+.download-content h3 {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--space-md);
+}
+
+.download-content p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: var(--space-lg);
+}
+
+.download-features {
+    background: rgba(139, 170, 173, 0.08);
+    padding: var(--space-lg);
+    border-radius: var(--radius-md);
+    margin: var(--space-lg) 0;
+    border-left: 3px solid var(--denim);
+}
+
+.download-features ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-sm);
+}
+
+.download-features li {
+    position: relative;
+    padding-left: var(--space-lg);
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.download-features li::before {
+    content: '📄';
+    position: absolute;
+    left: 0;
+    font-size: 1rem;
+}
+
+.btn-download {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-md) var(--space-xl);
+    background: linear-gradient(135deg, var(--denim), var(--rose-quartz));
+    color: white;
+    text-decoration: none;
+    border-radius: var(--radius-full);
+    font-weight: 600;
+    font-size: 1.05rem;
+    transition: var(--transition-smooth);
+    box-shadow: 0 10px 30px rgba(39, 93, 173, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-download::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transition: var(--transition-base);
+    transform: translate(-50%, -50%);
+}
+
+.btn-download:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.btn-download:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(39, 93, 173, 0.4);
+}
+
+.btn-download svg {
+    width: 20px;
+    height: 20px;
+    animation: downloadBounce 2s ease-in-out infinite;
+}
+
+@keyframes downloadBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(3px); }
+}
+
+@keyframes shimmer {
+    0%, 100% { transform: translateX(-100%) rotate(45deg); }
+    50% { transform: translateX(100%) rotate(45deg); }
+}
+
+@media (max-width: 968px) {
+    .download-features ul {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .download-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .download-icon {
+        margin: 0 auto;
+        width: 80px;
+        height: 80px;
+    }
+    
+    .download-icon svg {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .download-content h3 {
+        font-size: 1.5rem;
+    }
+    
+    .btn-download {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .understanding-grid {
