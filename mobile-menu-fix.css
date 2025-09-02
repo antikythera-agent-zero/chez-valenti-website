@@ -1,0 +1,91 @@
+/* Mobile Menu Fix - Additional styles to ensure menu displays properly */
+
+@media (max-width: 1024px) {
+    /* Reset any inherited styles that might cause clipping */
+    body.menu-open {
+        overflow: hidden;
+    }
+    
+    /* Ensure the navbar doesn't clip content */
+    .navbar {
+        overflow: visible !important;
+        height: auto !important;
+        min-height: 70px;
+    }
+    
+    .nav-container {
+        overflow: visible !important;
+        position: relative;
+        z-index: 1001;
+    }
+    
+    /* Make the menu completely independent */
+    .nav-menu {
+        position: fixed !important;
+        top: 70px !important;
+        left: -100% !important;
+        width: 100% !important;
+        height: calc(100vh - 70px) !important;
+        background: rgba(28, 55, 56, 0.98) !important;
+        z-index: 9998 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        padding: 2rem 0 !important;
+        transition: left 0.3s ease-in-out !important;
+        overflow-y: auto !important;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .nav-menu.active {
+        left: 0 !important;
+    }
+    
+    /* Ensure links are visible and properly styled */
+    .nav-menu .nav-link {
+        display: block !important;
+        padding: 1rem 2rem !important;
+        color: #F4FFF8 !important;
+        font-size: 1.2rem !important;
+        text-decoration: none !important;
+        border-bottom: 1px solid rgba(139, 170, 173, 0.2) !important;
+        transition: all 0.3s ease !important;
+        background: transparent !important;
+        text-align: center !important;
+        width: 100% !important;
+    }
+    
+    .nav-menu .nav-link:first-child {
+        border-top: 1px solid rgba(139, 170, 173, 0.2) !important;
+    }
+    
+    .nav-menu .nav-link:hover,
+    .nav-menu .nav-link:focus {
+        background: rgba(139, 170, 173, 0.15) !important;
+        color: #8BAAAD !important;
+    }
+    
+    .nav-menu .nav-link.active {
+        background: rgba(171, 169, 195, 0.2) !important;
+        color: #ABA9C3 !important;
+    }
+    
+    /* Ensure hamburger is on top */
+    .hamburger {
+        position: relative !important;
+        z-index: 10000 !important;
+        display: flex !important;
+    }
+    
+    /* Add overlay behind menu */
+    .nav-menu.active::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: -1;
+    }
+}
+

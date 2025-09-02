@@ -1922,22 +1922,60 @@ body::after {
 
 /* Responsive Design - Mobile First */
 @media (max-width: 1024px) {
+    /* Ensure navbar doesn't clip the menu */
+    .navbar {
+        overflow: visible !important;
+    }
+    
+    .nav-container {
+        overflow: visible !important;
+    }
+    
     .nav-menu {
-        position: fixed;
+        position: fixed !important;
         left: -100%;
         top: 70px;
+        right: 0;
+        bottom: 0;
         flex-direction: column;
         background: rgba(28, 55, 56, 0.98);
         width: 100%;
         text-align: center;
-        transition: var(--transition-smooth);
+        transition: left 0.3s ease-in-out;
         backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
         padding: var(--space-xl) 0;
         box-shadow: 0 10px 30px rgba(0, 15, 8, 0.3);
+        z-index: 9999 !important;
+        height: calc(100vh - 70px);
+        overflow-y: auto;
+        max-height: calc(100vh - 70px);
+        display: flex;
+        gap: 0;
     }
 
     .nav-menu.active {
         left: 0;
+    }
+    
+    /* Style nav links for mobile */
+    .nav-menu .nav-link {
+        display: block;
+        padding: var(--space-md) var(--space-lg);
+        color: var(--mint-cream);
+        font-size: 1.1rem;
+        border-bottom: 1px solid rgba(139, 170, 173, 0.1);
+        transition: all 0.3s ease;
+    }
+    
+    .nav-menu .nav-link:hover {
+        background: rgba(139, 170, 173, 0.1);
+        transform: translateX(10px);
+    }
+    
+    .nav-menu .nav-link.active {
+        background: rgba(171, 169, 195, 0.15);
+        color: var(--rose-quartz);
     }
 
     .hamburger {

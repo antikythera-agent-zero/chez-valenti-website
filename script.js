@@ -1,22 +1,79 @@
-// DOM Elements
-const hamburger = document.getElementById('hamburger');
-const navMenu = document.getElementById('nav-menu');
-const consultationForm = document.getElementById('consultationForm');
+// DOM Elements - Initialize after DOM is ready
+let hamburger, navMenu, consultationForm;
 
-// Mobile Navigation Toggle with smooth animation
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active');
-});
-
-// Close mobile menu when clicking on a link
-document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-        // Always close mobile menu when any link is clicked
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
+// Initialize mobile menu - using a more robust approach
+function initializeMobileMenu() {
+    hamburger = document.getElementById('hamburger');
+    navMenu = document.getElementById('nav-menu');
+    
+    if (!hamburger || !navMenu) {
+        console.warn('Mobile menu elements not found, retrying...');
+        // Try again after a short delay if elements aren't found
+        setTimeout(initializeMobileMenu, 100);
+        return;
+    }
+    
+    console.log('Mobile menu initialized successfully');
+    
+    // Set ARIA attributes
+    hamburger.setAttribute('aria-label', 'Toggle navigation menu');
+    hamburger.setAttribute('aria-expanded', 'false');
+    hamburger.setAttribute('role', 'button');
+    
+    // Remove any existing click listeners to avoid duplicates
+    const newHamburger = hamburger.cloneNode(true);
+    hamburger.parentNode.replaceChild(newHamburger, hamburger);
+    hamburger = newHamburger;
+    
+    // Add click listener
+    hamburger.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        console.log('Hamburger clicked');
+        
+        // Toggle active classes
+        this.classList.toggle('active');
+        navMenu.classList.toggle('active');
+        
+        // Update ARIA expanded state
+        const isExpanded = this.classList.contains('active');
+        this.setAttribute('aria-expanded', isExpanded);
+        
+        // Add/remove body class to prevent scrolling when menu is open
+        if (isExpanded) {
+            document.body.classList.add('menu-open');
+        } else {
+            document.body.classList.remove('menu-open');
+        }
+        
+        console.log('Menu state:', isExpanded ? 'open' : 'closed');
     });
-});
+    
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', function() {
+            if (hamburger && navMenu) {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+                document.body.classList.remove('menu-open');
+            }
+        });
+    });
+}
+
+// Initialize when DOM is ready
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function() {
+        initializeMobileMenu();
+        consultationForm = document.getElementById('consultationForm');
+    });
+} else {
+    // DOM is already loaded
+    initializeMobileMenu();
+    consultationForm = document.getElementById('consultationForm');
+}
 
 // Smooth Scrolling Function with easing
 function scrollToSection(sectionId) {
@@ -361,7 +418,8 @@ class TextReveal {
 // Text reveal disabled for new rotating questions design
 
 // Form Handling with EmailJS integration
-consultationForm.addEventListener('submit', function(e) {
+if (consultationForm) {
+    consultationForm.addEventListener('submit', function(e) {
     e.preventDefault();
     
     // Get form data
@@ -465,7 +523,8 @@ consultationForm.addEventListener('submit', function(e) {
             submitBtn.classList.remove('loading');
             submitBtn.disabled = false;
         });
-});
+    });
+}
 
 // Add form animation styles
 const formStyles = document.createElement('style');
@@ -1084,18 +1143,8 @@ document.addEventListener('DOMContentLoaded', () => {
     
     document.body.insertBefore(skipLink, document.body.firstChild);
     
-    // ARIA labels for interactive elements
-    const hamburger = document.getElementById('hamburger');
-    if (hamburger) {
-        hamburger.setAttribute('aria-label', 'Toggle navigation menu');
-        hamburger.setAttribute('aria-expanded', 'false');
-        hamburger.setAttribute('role', 'button');
-        
-        hamburger.addEventListener('click', () => {
-            const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
-            hamburger.setAttribute('aria-expanded', !isExpanded);
-        });
-    }
+    // ARIA labels for other interactive elements
+    // (hamburger ARIA is handled in the main navigation setup above)
 });
 
 // Performance monitoring
