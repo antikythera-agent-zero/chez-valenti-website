@@ -69,9 +69,12 @@
     padding: 2rem;
     background: rgba(244, 255, 248, 0.1);
     backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px); /* Safari/Chrome support */
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 20px;
     animation: fadeInUp 1s ease 0.4s both;
+    min-height: auto; /* Ensure content dictates height */
+    overflow: visible; /* Prevent text cutoff */
 }
 
 .hero-statement p {
@@ -79,6 +82,11 @@
     line-height: 1.8;
     color: var(--snow);
     margin: 0;
+    word-wrap: break-word; /* Handle long words */
+    overflow-wrap: break-word; /* Modern property for word breaking */
+    hyphens: auto; /* Allow hyphenation if needed */
+    -webkit-hyphens: auto; /* Safari support */
+    display: block; /* Ensure block-level display */
 }
 
 /* Notice Section */
@@ -769,6 +777,35 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    /* Hero Section Mobile Fixes */
+    .hypno-hero {
+        padding: 100px 0 60px;
+        min-height: auto;
+    }
+    
+    .hero-title {
+        font-size: clamp(2rem, 4vw, 2.5rem);
+        margin-bottom: 0.75rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .hero-statement {
+        padding: 1.5rem;
+        margin: 0 1rem; /* Add horizontal margin on mobile */
+    }
+    
+    .hero-statement p {
+        font-size: 1rem;
+        line-height: 1.6;
+        /* Ensure text doesn't get cut off */
+        min-height: auto;
+        padding-bottom: 0.5rem; /* Add padding to prevent cutoff */
+    }
+    
     .understanding-grid {
         grid-template-columns: 1fr;
     }
