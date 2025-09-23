@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Hide the analytics page
+Disallow: /ga-stats/
+
+Sitemap: https://www.chezvalenti.com/sitemap.xml

@@ -418,9 +418,11 @@ class TextReveal {
 // Text reveal disabled for new rotating questions design
 
 // Form Handling with EmailJS integration
-if (consultationForm) {
-    consultationForm.addEventListener('submit', function(e) {
-    e.preventDefault();
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('consultationForm');
+    if (form) {
+        form.addEventListener('submit', function(e) {
+        e.preventDefault();
     
     // Get form data
     const formData = new FormData(this);
@@ -489,12 +491,12 @@ if (consultationForm) {
     };
 
     // Send email using EmailJS
-    emailjs.send('service_e21w73j', 'template_6uz7zkr', templateParams)
+    emailjs.send('service_x2zxtsk', 'template_qac0yyd', templateParams)
         .then(function(response) {
             console.log('SUCCESS!', response.status, response.text);
             
             // Reset form with animation
-            const inputs = consultationForm.querySelectorAll('input, textarea, select');
+            const inputs = form.querySelectorAll('input, textarea, select');
             inputs.forEach((input, index) => {
                 setTimeout(() => {
                     input.value = '';
@@ -524,7 +526,8 @@ if (consultationForm) {
             submitBtn.disabled = false;
         });
     });
-}
+    }
+});
 
 // Add form animation styles
 const formStyles = document.createElement('style');
@@ -1255,7 +1258,7 @@ if (newsletterForm) {
         };
         
         // Send email using EmailJS
-        emailjs.send('service_e21w73j', 'template_nd24blx', templateParams)
+        emailjs.send('service_x2zxtsk', 'template_litvnrw', templateParams)
             .then(function(response) {
                 console.log('Newsletter subscription SUCCESS!', response.status, response.text);
                 
