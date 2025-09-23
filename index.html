@@ -4,13 +4,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chez Valenti - Professional Hypnotherapy & Regression Therapy</title>
-    <meta name="description" content="Professional hypnotherapy services with 20 years of experience. Specialized in regression therapy, trauma healing, and life transformation. Located in Knysna, South Africa.">
+    <title>Chez Valenti | Hypnotherapist in Knysna – Regression Therapy & Hypno-Oncology</title>
+    <meta name="description" content="Professional hypnotherapy in Knysna and online: regression therapy, trauma support, habit change, student performance, and hypno-oncology. Book a consultation.">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="mobile-menu-fix.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.chezvalenti.com/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Chez Valenti | Hypnotherapist in Knysna">
+    <meta property="og:description" content="Hypnotherapy and regression therapy in Knysna & online. Hypno-oncology, trauma, habits, students.">
+    <meta property="og:url" content="https://www.chezvalenti.com/">
+    <meta property="og:image" content="https://www.chezvalenti.com/assets/Chez-valenti-1Up.png">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Chez Valenti | Hypnotherapist in Knysna">
+    <meta name="twitter:description" content="Regression therapy, trauma support, hypno-oncology. Book online or in Knysna.">
+    <meta name="twitter:image" content="https://www.chezvalenti.com/assets/Chez-valenti-1Up.png">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@graph":[
+        {
+          "@type":"LocalBusiness",
+          "@id":"https://www.chezvalenti.com/#practice",
+          "name":"Chez Valenti Hypnotherapy",
+          "image":"https://www.chezvalenti.com/assets/Chez-valenti-1Up.png",
+          "url":"https://www.chezvalenti.com/",
+          "telephone":"+27-XX-XXX-XXXX",
+          "address":{
+            "@type":"PostalAddress",
+            "streetAddress":"4 Barracuda Street, Fisher Haven",
+            "addressLocality":"Knysna",
+            "postalCode":"6571",
+            "addressRegion":"Western Cape",
+            "addressCountry":"ZA"
+          },
+          "areaServed":"ZA",
+          "priceRange":"R",
+          "sameAs":[
+            "https://www.instagram.com/REPLACE_ME",
+            "https://www.amazon.com/Getting-Core-Chez-Valenti/dp/0620712791"
+          ],
+          "knowsAbout":[
+            "Hypnotherapy","Regression Therapy","Trauma Support","Habit Change","Exam Anxiety",
+            "Hypno-Oncology","Online Hypnotherapy"
+          ],
+          "makesOffer":[
+            {"@type":"Offer","itemOffered":{"@type":"Service","name":"Regression Therapy"}},
+            {"@type":"Offer","itemOffered":{"@type":"Service","name":"Trauma Support"}},
+            {"@type":"Offer","itemOffered":{"@type":"Service","name":"Habit Change"}},
+            {"@type":"Offer","itemOffered":{"@type":"Service","name":"Hypno-Oncology"}}
+          ]
+        },
+        {
+          "@type":"Person",
+          "@id":"https://www.chezvalenti.com/#chez",
+          "name":"Chez Valenti",
+          "jobTitle":"Hypnotherapist & Regression Specialist",
+          "url":"https://www.chezvalenti.com/",
+          "worksFor":{"@id":"https://www.chezvalenti.com/#practice"},
+          "sameAs":[
+            "https://www.instagram.com/REPLACE_ME",
+            "https://www.amazon.com/Getting-Core-Chez-Valenti/dp/0620712791"
+          ]
+        }
+      ]
+    }
+    </script>
+    
+    <!-- GA4 with Consent Banner -->
+    <script src="/assets/ga4-consent.js"></script>
 </head>
 <body>
     <!-- Navigation -->
@@ -26,7 +98,7 @@
                 <a href="#podcast" class="nav-link">Podcast</a>
                 <a href="#services" class="nav-link">Services</a>
                 <a href="hypno-oncology.html" class="nav-link">Hypno-Oncology</a>
-                <a href="#book" class="nav-link">Book</a>
+                <a href="#book" class="nav-link">My Book</a>
                 <a href="#testimonials" class="nav-link">Testimonials</a>
                 <a href="#contact" class="nav-link">Contact</a>
             </div>
@@ -47,12 +119,13 @@
             <div class="hero-overlay"></div>
         </div>
         <div class="hero-content">
+            <h1 class="visually-hidden">Hypnotherapist in Knysna & Online</h1>
             <div class="hero-questions">
-                <h1 class="question-text active" data-question="1">Are you serious about bringing lasting change into your life?</h1>
-                <h1 class="question-text" data-question="2">Are you ready to start a journey to discover your core?</h1>
-                <h1 class="question-text" data-question="3">Have you tried other therapies without lasting results?</h1>
-                <h1 class="question-text" data-question="4">Do you want to discover your true potential?</h1>
-                <h1 class="question-text" data-question="5">Are you ready for positive change?</h1>
+                <div class="question-text active" data-question="1">Are you serious about bringing lasting change into your life?</div>
+                <div class="question-text" data-question="2">Are you ready to start a journey to discover your core?</div>
+                <div class="question-text" data-question="3">Have you tried other therapies without lasting results?</div>
+                <div class="question-text" data-question="4">Do you want to discover your true potential?</div>
+                <div class="question-text" data-question="5">Are you ready for positive change?</div>
             </div>
             <div class="hero-buttons">
                 <button class="btn-primary" onclick="scrollToSection('contact')">Book Your Consultation</button>
@@ -122,16 +195,16 @@
                         <!-- Thumbnail Navigation -->
                         <div class="carousel-thumbnails">
                             <div class="thumbnail-item active glass-effect" data-index="0">
-                                <img src="assets/Chez-valenti-1Up.png" alt="Photo 1" class="thumbnail-photo">
+                                <img src="assets/Chez-valenti-1Up.png" alt="Chez Valenti hypnotherapist portrait" class="thumbnail-photo">
                             </div>
                             <div class="thumbnail-item glass-effect" data-index="1">
-                                <img src="assets/Chez-valenti-2Up.png" alt="Photo 2" class="thumbnail-photo">
+                                <img src="assets/Chez-valenti-2Up.png" alt="Chez Valenti at practice in Knysna" class="thumbnail-photo">
                             </div>
                             <div class="thumbnail-item glass-effect" data-index="2">
-                                <img src="assets/Chez-valenti-4Up.png" alt="Photo 3" class="thumbnail-photo">
+                                <img src="assets/Chez-valenti-4Up.png" alt="Chez Valenti professional headshot" class="thumbnail-photo">
                             </div>
                             <div class="thumbnail-item glass-effect" data-index="3">
-                                <img src="assets/Chez-valenti-5Up.png" alt="Photo 4" class="thumbnail-photo">
+                                <img src="assets/Chez-valenti-5Up.png" alt="Chez Valenti hypnotherapy consultation" class="thumbnail-photo">
                             </div>
                         </div>
                     </div>
@@ -262,11 +335,11 @@
                         </svg>
                     </div>
                     <h3>Habit Breaking</h3>
-                    <p>Effective programs to overcome self-sabotage, addictive behaviors, and unwanted habits.</p>
+                    <p>Effective programs for weight management, nervous habits, and unwanted behavioral patterns. <em style="font-size: 0.9em;">Note: We do not offer smoking cessation services.</em></p>
                     <ul>
-                        <li>Self-Sabotage Patterns</li>
                         <li>Weight Management</li>
-                        <li>Behavioral Modification</li>
+                        <li>Nervous Habits</li>
+                        <li>Self-Sabotage Patterns</li>
                     </ul>
                 </div>
                 
@@ -474,10 +547,10 @@
                 </div>
                 <div class="book-images">
                     <div class="book-cover-main glass-effect">
-                        <img src="assets/The_Core-2.jpg" alt="Getting to the Core - Book Cover" class="book-cover">
+                        <img src="assets/The_Core-2.jpg" alt="Getting to the Core book cover by Chez Valenti" class="book-cover">
                     </div>
                     <div class="book-cover-promo glass-effect">
-                        <img src="assets/Getting-to-the-Core.jpg" alt="Getting to the Core - Promotional Image" class="book-promo">
+                        <img src="assets/Getting-to-the-Core.jpg" alt="Getting to the Core book by Chez Valenti - regression therapy guide" class="book-promo">
                     </div>
                 </div>
             </div>
@@ -591,17 +664,21 @@
                             </div>
                         </div>
                         <div class="info-item">
-                            <span class="info-icon">✉️</span>
                             <div>
-                                <strong>Email:</strong><br>
+                                <strong>✉️ Email:</strong><br>
                                 <a href="mailto:chez@ultimatemindpower.co.za">chez@ultimatemindpower.co.za</a>
                             </div>
                         </div>
                         <div class="info-item">
-                            <span class="info-icon">🌐</span>
                             <div>
-                                <strong>Website:</strong><br>
+                                <strong>🌐 Website:</strong><br>
                                 <a href="https://chezvalenti.com">chezvalenti.com</a>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div>
+                                <strong>📱 WhatsApp (WhatsApp Only):</strong><br>
+                                <a href="https://wa.me/27828802739" target="_blank">+27 82 880 2739</a>
                             </div>
                         </div>
                     </div>
@@ -692,11 +769,12 @@
                 <div class="footer-section">
                     <h4>Contact</h4>
                     <p>chez@ultimatemindpower.co.za</p>
+                    <p>WhatsApp (WhatsApp only): <a href="https://wa.me/27828802739" target="_blank" style="color: inherit;">+27 82 880 2739</a></p>
                     <p>Knysna, South Africa</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Chez Valenti. All rights reserved. | Professional Hypnotherapy Services</p>
+                <p><a href="/ga-stats/" style="text-decoration: none; color: inherit; cursor: default;" title="Analytics Dashboard">&copy;</a> 2025 Chez Valenti. All rights reserved. | Professional Hypnotherapy Services</p>
                 <div class="footer-credits">
                     <p>Powered by <a href="https://antikythera.co.za/" target="_blank" rel="noopener noreferrer" class="antikythera-link">Antikythera Technologies PTY LTD</a></p>
                 </div>
@@ -708,7 +786,7 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript">
         (function(){
-            emailjs.init("o8zn-rPZHeb0Ef_OF");
+            emailjs.init("d70NJIb8UJqzVYZPs");
         })();
     </script>
     
